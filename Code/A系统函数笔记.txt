@@ -1,0 +1,95 @@
+1.Lua获取当前时间：
+local socket = require socket           
+local t0 = socket.gettime()
+
+2.C++获取当前时间：
+long time1 = GetTickCount();//程序段开始前取得系统运行时间(ms)
+
+3.获得按钮tag
+void GameHistoryScencecbShowItemInfo(cocos2dRef pLayout, cocos2duiLayoutTouchEventType _type)
+{
+        if (_type != uiWidgetTouchEventTypeENDED)
+        {
+                return;
+        }
+        int itag = ((Node)pLayout)-getTag();
+}
+
+4.点击了那个按钮（相同按钮中）
+ void gpReplayScenceButton_ClickPlayer(cocos2dRef pNode, WidgetUserInfo pInfo)
+ {
+        if (m_nSelfServerSeat == INVALID_SEAT)
+        {
+                return;
+        }
+         for (int i = 0; i  MAX_PLAYER; i++)
+         {
+                int nLocalSeat = SERVER2LOCAL(i);
+                if (WidgetFungetChildWidget(m_pPlayer[nLocalSeat]-getPlayerNode(), Button_ClickPlayer) == (cocos2dNode)pNode)
+                {
+                        showPopPlayerInfo(nLocalSeat);
+                        m_nPlayerInfoIndex = nLocalSeat;
+                 }
+         }
+}
+
+5.ios复制到剪贴板成功提示：
+UIAlertView msgbox = [[UIAlertView alloc] initWithTitle@提示 message@复制成功 delegatenil cancelButtonTitle@确定 otherButtonTitlesnil];
+[msgbox show];
+
+6.安卓复制到剪贴板成功提示
+runOnUiThread(runnable);
+                showToast(复制成功);
+7.正弦曲线
+int r,x;
+        for (double y = 1; y  -1; y -= 0.1)
+        {
+                x = asin(y)10;
+                for (r = 1; r  x + Pai102; ++r)
+                {
+                        printf( );
+                }
+                printf();
+                for (; r  Pai10  3  2 - x; ++r)
+                {
+                        printf( );
+                }
+                printf(n);
+        }
+13.网格效果 cocos
+auto nodegrid = NodeGridcreate();
+Sprite sprite = Spritecreate(HelloWorld.png);
+nodegrid-addChild(sprite); 
+this-addChild(nodegrid);
+
+翻页效果
+auto pageturn = PageTurn3Dcreate(20, Size(200, 180));
+震动效果
+auto shaky = Shaky3Dcreate(6, Size(2, 1), 5, false);
+翻转效果
+auto flipX = FlipX3Dcreate(2);
+auto reFlipX = flipX-reverse();
+auto delay = DelayTimecreate(2);      延时2秒
+透镜效果
+auto lens = Lens3Dcreate(5, Size(5, 5), Size(visibleSize.width  2, visibleSize.height  2), 250);
+液体效果
+auto liquid = Liquidcreate(5, Size(16, 12), 4, 10);  参数：持续时间、网格大小、波纹数、振幅
+波纹效果
+auto ripple = Ripple3Dcreate(5, Size(20, 16), Size(visibleSize.width  2, visibleSize.height  2), 300, 6, 50);
+波浪效果
+auto wave = Waves3Dcreate(5, Size(25, 20), 6, 30);
+
+nodegrid-runAction(wave);
+
+14.char data[0]; 柔性数组,它只能放在结构体末尾,是申明一个长度为0的数组，就可以使得这个结构体是可变长的。
+
+15.获取new 数组大小
+char  p = new char[65];
+int _arraySize = ((size_t)((char)p - 16));
+32位：指向数组前有一个36字节的结构体
+
+16.this-schedule(schedule_selector(ddzReplayScenceSendCardUpdate), 0.2f);
+
+17.后缀名批量修改(.bat文件) ren .旧格式名(txt) .新格式名(mp4)
+
+18.Ctrl + M + O （折叠所有的函数）   Ctrl + M + P （展开所有的函数）

@@ -1,0 +1,49 @@
+<html>
+ <head></head> 
+ <body> 
+
+  <script>
+  function getNext(str) {
+    var curIndex=0;
+    var nextIndex=-1; 
+    var next = [];
+    next[0]=nextIndex;
+
+    while (curIndex<str.length) {
+      if (-1==nextIndex||str[curIndex]==str[nextIndex]) {
+        next[++curIndex]=++nextIndex;
+      }
+      else{
+        nextIndex=next[nextIndex]
+      }
+    }
+    return next;
+  }
+  function KMP(sourceStr,targetStr){
+    var next = getNext(targetStr);
+    var srcIndex =0;
+    var tarIndex =0;
+    while(srcIndex<sourceStr.length&&tarIndex<targetStr.length){
+      if (-1==next[tarIndex]||sourceStr[srcIndex]==targetStr[tarIndex]) {
+        ++srcIndex;
+        ++tarIndex;
+      } else {
+        tarIndex=next[tarIndex]
+      }
+    }
+    if (tarIndex==targetStr.length) {
+      return srcIndex-targetStr.length+1
+    }
+    else{
+      return -1;
+    }
+  }
+  function myFunction(){
+    document.getElementById("result").innerHTML="result: " + KMP('12ss312312456','123124');
+  }
+  </script> 
+
+  <p id="result">result:</p> 
+  <button onclick="myFunction()">点击这里</button>  
+ </body>
+</html>

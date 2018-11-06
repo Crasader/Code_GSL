@@ -1,0 +1,31 @@
+
+1.进贤 经典斗地主：
+cd /home/qipai/game_logic/jinxian/jindiandoudizhu/JingDianDouDiZhu_Server/linux
+
+3.进贤 3K：
+cd /home/qipai/game_logic/jinxian/3k/jinxian3k_server/linux
+
+supervisorctl status | grep "guixi"
+
+gdb xy_game_jdddzpk 
+
+cat /etc/supervisord.d/guixijindiandoudizhugamelogicsrv.ini 
+
+supervisorctl /etc/supervisord.d/guixijindiandoudizhugamelogicsrv.ini 
+
+supervisorctl stop guixijindiandoudizhugamelogicsrv
+
+supervisorctl stop guixidoudizhugamelogicsrv
+
+supervisorctl status | grep  "guixi"
+
+-- 服务器打断点
+supervisorctl
+ps -ef|grep doudizhu
+gdb attach 30604
+stop
+b GameLogicGxmj.cpp:2618
+
+guixigandengyangmelogicsrv
+
+vim update.sh 

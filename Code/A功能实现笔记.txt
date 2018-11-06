@@ -1,0 +1,29 @@
+1.正弦曲线
+int r,x;
+        for (double y = 1; y  -1; y -= 0.1)
+        {
+                x = asin(y)10;
+                for (r = 1; r  x + Pai102; ++r)
+                {
+                        printf( );
+                }
+                printf();
+                for (; r  Pai10  3  2 - x; ++r)
+                {
+                        printf( );
+                }
+                printf(n);
+        }
+2.获取new 数组大小
+char  p = new char[65];
+int _arraySize = ((size_t)((char)p - 16));
+32位：指向数组前有一个36字节的结构体
+
+3.后缀名批量修改(.bat文件) ren .旧格式名(txt) .新格式名(mp4)
+
+4.Ctrl + M + O （折叠所有的函数）   Ctrl + M + P （展开所有的函数）
+
+5.三步求后缀（前缀）表达式：
+（1）将 A+B(C-(D+F))E 按优先级加括号 ( A+((B(C-(D+F))E)))
+（2）从最内层括号将符号提到括号后（前缀提到括号前）（A（（B（C（DF）+）-）E））+
+（3）去掉括号的即所得 ABCDF+-E+
