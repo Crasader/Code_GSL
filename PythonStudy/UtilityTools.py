@@ -143,10 +143,6 @@
 # site = {"name": "菜鸟教程", "url": "www.runoob.com"}
 # print("网站名：{name}, 地址 {url}".format(**site))
 
-# # 三单引号(''')
-# print('''i
-# love
-# you''') #特殊功能,可以直接打印多行内容,而前面两种情况需要显示输入\n才能换行
 
 
 # import time
@@ -232,11 +228,78 @@
 #    thread.start_new_thread( print_time, ("Thread-2", 1, ) )
 # except:
 #    print "Error: unable to start thread"
- 
-# while 1:
-#    pass
+
+# # 画四边形
+# inputValue = 4
+# num = inputValue * 2 - 1
+# arr2D = []
+# for r in range(num):
+#     arr = []
+#     for c in range(num):
+#         arr.append(0)
+#         pass
+#     arr2D.append(arr)
+#     pass
+# print arr2D
+
+# for raw in range(inputValue):
+#     col = inputValue - 1 - raw
+#     for i in range(inputValue):
+#         arr2D[raw + i][col + i] = 1
+#         pass
+#     pass
+# print arr2D
+
+# for r in range(num):
+#     for c in range(num):
+#         if 1 == arr2D[r][c]:
+#             print '*',
+#             pass
+#         else:
+#             print '_',
+#             pass
+#         pass
+#     print
+#     pass
 
 
+# # get 14
+# sumValue = 14
+# arr = [9,1,9,7,5,13,7,7]
+
+# arrAssist = []
+# for index in range(sumValue-1):
+#     arrAssist.append(0)
+#     pass
+
+# for item in arr:
+#     arrAssist[item-1] += 1
+#     pass
+
+# for index in range((sumValue-1)/2):
+#     if 0 < arrAssist[index] and 0 < arrAssist[12-index]:
+#         if arrAssist[index] > arrAssist[12-index] :
+#             arrAssist[index] -= arrAssist[12-index]
+#             arrAssist[12-index] = 0
+#             pass
+#         else:
+#             arrAssist[12-index] -= arrAssist[index]
+#             arrAssist[index] = 0
+#             pass  
+#     pass
+
+# if 0 == sumValue % 2:
+#     mediant = (sumValue) / 2
+#     while 1 < arrAssist[mediant-1]:
+#         arrAssist[mediant-1] -= 2
+#     pass
+
+# for index in range((sumValue-1)):
+#     while 0 < arrAssist[index]:
+#         print index + 1,
+#         arrAssist[index] -= 1
+#         pass
+#     pass
 
 # from Tkinter import *           # 导入 Tkinter 库
 # root = Tk()                     # 创建窗口对象的背景色
@@ -286,15 +349,3 @@
 
 # import pickle
 # print(dir(pickle))
-
-arr=[]
-for i in range(5):
-    x=int(raw_input())
-    arr.append(x)
-    pass
-
-print arr
-
-arr.sort()
-
-print arr
