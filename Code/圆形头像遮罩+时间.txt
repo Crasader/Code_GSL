@@ -1,0 +1,19 @@
+local socket = require "socket"
+local t0 = socket.gettime()*1000
+
+local oldPosX,oldPosY = imgHead:getPosition()
+imgHead:removeFromParent(true)
+
+local stencil = cc.Sprite:create("image/play/circleShader.png")
+stencil:setScale(0.60)
+local clipper = cc.ClippingNode:create()
+clipper:setStencil(stencil)
+clipper:setInverted(true)
+clipper:setAlphaThreshold(0)
+
+curDeskTop:addChild(clipper)
+clipper:setPosition(cc.p(oldPosX,oldPosY))
+clipper:addChild(imgHead)
+imgHead:setPosition(cc.p(0,0))
+
+gt.log("-----test-----time:"..(socket.gettime()*1000-t0))
