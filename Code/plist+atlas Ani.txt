@@ -1,0 +1,3 @@
+self.sk1 = sp.SkeletonAnimationcreate(imageplayreportdajiesuan.json, imageplayreportdajiesuan.atlas)
+self.sk1 setAnimation(0, in, false)
+self.sk1setAnimation(0, xunhuan, true)
