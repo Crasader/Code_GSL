@@ -1,3 +1,4 @@
 *.bak
 *.bat
 *.txt
+/test.txt
