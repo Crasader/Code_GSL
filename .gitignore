@@ -2,3 +2,4 @@
 *.bat
 *.txt
 /test.txt
+*.py
