@@ -4,12 +4,12 @@ import sys
 
 
 def main():
-    name = "numberScore"
+    name = "numberCoin"
     size = 30    # 字体大小
-    width = 288  # 图片宽度
+    width = 220  # 图片宽度
     height = 30  # 图片高度
     # 字符集
-    chars = ['.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     chars_count = len(chars)
 
     content = ("info face=\"Arial\" size=%d bold=1 italic=0 charset=\"\" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0\n" \
@@ -23,7 +23,7 @@ def main():
             % (ord(chars[i]), w * i, 0, w, height, w)
         content += line
 
-    f = file("E:\\hall\\"+name+".fnt", "w+")
+    f = file("E:\\2_Git_Self\\Code_GSL\\"+name+".fnt", "w+")
     f.write(content)
     f.close()
 
