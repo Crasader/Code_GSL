@@ -23,7 +23,7 @@ def main():
             % (ord(chars[i]), w * i, 0, w, height, w)
         content += line
 
-    f = file("E:\\2_Git_Self\\Code_GSL\\"+name+".fnt", "w+")
+    f = file("E:\\2_Git_Self\\Code_GSL\\fnt\\"+name+".fnt", "w+")
     f.write(content)
     f.close()
 
